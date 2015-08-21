@@ -1,0 +1,38 @@
+---
+title: "bootcamp2"
+output: html_document
+---
+
+Load the following packages for loading data
+
+```{r}
+library(curl)
+library(dplyr)
+library(ggplot2)
+```
+
+Load the data
+
+```{r}
+gap <- read.csv(curl("http://bit.ly/gap_data"))
+```
+
+
+New Dataset
+
+```{r}
+eu_5267 <- gap %>%
+  filter(continent == "Europe", year %in% c(1952, 1967))
+ggplot(data = eu_52, aes(x = gdpPercap, y = lifeExp, color = factor(year))) +
+  geom_point()
+```
+
+Old dataset
+
+```{r}
+eu_52 <- gap %>%
+  filter(continent == "Europe", year == 1952)
+ggplot(data = eu_52, aes(x = gdpPercap, y = lifeExp)) +
+  geom_point()
+```
+
