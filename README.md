@@ -2,5 +2,5 @@
 
 Duke StatSci Computing Bootcamp 2015
 
-Author - Sanjay Hariharan (xxx@gmail.com)
-Test change
+Author - Sanjay "None" Hariharan (xxx@gmail.com)
+
